@@ -1,14 +1,16 @@
 "use client"
 
-import Button from "./Button";
-import Logo from "./Logo";
 import { HiMenu } from 'react-icons/hi'
 
-const Navbar = () => {
+interface Navbarprops {
+    toggleNavbar: ()=>void
+}
+
+const Navbar: React.FC <Navbarprops> = ({ toggleNavbar }) => {
     return ( 
-    <nav className="page h-24 bg-[#6C82E3] bg-opacity-10 border border-b-2">
+    <nav className="page w-full h-24 bg-[#6C82E3] bg-opacity-10 border border-b-2">
         <div className="h-full flex justify-between items-center py-6">
-            <button className="hover:opacity-80">
+            <button onClick={toggleNavbar} className="hover:opacity-80">
                 <HiMenu size={26}/>
             </button>
             

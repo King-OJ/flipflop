@@ -28,14 +28,14 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-/* @layer base {
-  html {
-    @apply font-bodyFont;
-  }
-} */
+ @layer base {
+ [data-nextjs-scroll-focus-boundary]{
+  display:contents;
+ }
+} 
 
 body {
-  @apply text-black bg-[#3357AE] bg-opacity-10;
+  @apply text-black bg-[#3357AE] bg-opacity-10 h-full;
 }
 
 h1,h2, h3, h4, h5, h6 {

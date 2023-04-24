@@ -17,7 +17,8 @@ const Category:React.FC<CategoryProps> = ({onClick, index, active, title, icon:I
     className={`
     flex 
     flex-col 
-    items-center 
+    items-center
+    justify-end 
     p-2 
     gap-2 
     text-white 
@@ -26,7 +27,8 @@ const Category:React.FC<CategoryProps> = ({onClick, index, active, title, icon:I
     hover:cursor-pointer 
     hover:bg-opacity-100 
     transition
-    border 
+    border
+    min-w-[100px] 
     border-b-2
     `}
     >

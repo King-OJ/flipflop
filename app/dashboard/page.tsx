@@ -1,5 +1,7 @@
 "use client"
 
+import PageHeader from "../components/PageHeader";
+
 const Home = ({
    children,
  }: {
@@ -8,7 +10,9 @@ const Home = ({
 
   if(children) return children;
 
-  return <div>All Jobs</div>
+  return (<section className="m-6 w-full" >
+          <PageHeader title="All Jobs" />
+        </section> )
 }
  
 export default Home;

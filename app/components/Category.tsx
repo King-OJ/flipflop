@@ -28,7 +28,7 @@ const Category:React.FC<CategoryProps> = ({onClick, index, active, title, icon:I
     hover:bg-opacity-100 
     transition
     border
-    min-w-[100px] 
+    md:min-w-[100px] 
     border-b-2
     `}
     >

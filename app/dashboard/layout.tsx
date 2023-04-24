@@ -10,6 +10,7 @@ import { HiCode } from 'react-icons/hi'
 import { FaChair } from 'react-icons/fa'
 
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 
 
@@ -89,7 +90,7 @@ export default function DashboardLayout(
     const [sidebar, setSidebar] = useState(false)
 
     return ( 
-        <section className="">
+        <section className="relative overflow-x-hidden">
             <Navbar toggleNavbar={()=>setSidebar(!sidebar)}/>
             <CategoriesBox>
                 <div className="flex gap-3">
@@ -102,12 +103,13 @@ export default function DashboardLayout(
                 </div>
             </CategoriesBox>
 
-            <div className="relative flex flex-row items-start">
+            <div className="w-full relative flex flex-row items-start">
                 {/* side menu */}
                 <Sidebar showSidebar={sidebar} />
                 {/* Content */}
-                <section className={` relative flex-1 left-[16%] transition-all ${sidebar && '-ml-[16%]'}`}>{children}</section>
+                <section className={` relative left-[16%] transition-all ${sidebar ? '-ml-[16%] w-full' : ' w-[84%]'}`}>{children}</section>
             </div>
+            {/* <Footer /> */}
         </section> 
      );
 }
